@@ -8,26 +8,26 @@ export default () => {
     const [results, setResults] = useState([])
     const [errorMessage, setErrorMessage] = useState('')
 
-    const searchApi = async (term) => {
-        console.log('Hi Api call ' + term)
+    const searchApi = async (searchTerm) => {
+        console.log('Hi Api call ' + searchTerm)
         try {
-
             //const res = await number.get('6788/English')
             //console.log(res.data)
             //console.log(res.data.words)
             const response = await yelp.get('/search', {
                 params: {
                     limit: 50,
-                    term,
-                    location: 'san jose'
+                    term: searchTerm,
+                    location: 'san jose',
                 }
             });
             setResults(response.data.businesses);
-            setErrorMessage('')
+            setErrorMessage('Search okay with ' + searchTerm)
 
         } catch (err) {
             console.log(err)
-            setErrorMessage('Error occured')
+            setErrorMessage('Error occured searching ' + searchTerm)
+            setResults([]);
         }
 
     }

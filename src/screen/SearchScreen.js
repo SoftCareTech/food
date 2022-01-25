@@ -9,11 +9,11 @@ const SearchScreen = () => {
     const [searchApi, results, errorMessage] = useResult()
     return <View style={styles.backgroud}>
         <SearchBar term={term}
-            onTermSubmit={searchApi}
+            onTermSubmit={() => { searchApi(term) }}
             onTermChange={(newTerm) => setTerm(newTerm)} />
 
         {errorMessage ? <Text>  {errorMessage}   </Text> : null}
-        <Text> We have found  XC  {results.length}</Text>
+        <Text> We have found    {results.length}</Text>
     </View>
 }
 const styles = StyleSheet.create({
