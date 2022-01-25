@@ -13,7 +13,7 @@ const SearchScreen = () => {
             onTermChange={(newTerm) => setTerm(newTerm)} />
 
         {errorMessage ? <Text>  {errorMessage}   </Text> : null}
-        <Text> We have found  {results.length}</Text>
+        <Text> We have found  XC  {results.length}</Text>
     </View>
 }
 const styles = StyleSheet.create({

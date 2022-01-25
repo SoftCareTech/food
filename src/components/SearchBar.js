@@ -9,9 +9,9 @@ const SearchBar = ({ term, onTermChange, onTermSubmit }) => {
             autoCapitalize="none"
             autoCorrect={false}
             value={term}
-            onChangeText={ onTermChange }
-            onEndEditing={() =>    onTermSubmit()  }
-            onSubmitEditing={onTermSubmit  }
+            onChangeText={onTermChange}
+            // onEndEditing={() =>    onTermSubmit()  }
+            onSubmitEditing={onTermSubmit}
             placeholder="Search"
             style={styles.inputStyle} />
     </View>
