@@ -9,6 +9,9 @@ npm-debug.*
 *.mobileprovision
 *.orig.*
 web-build/
+assests/Thumbs.db
+
 
 # macOS
 .DS_Store
+assets/Thumbs.db
