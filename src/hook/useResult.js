@@ -22,8 +22,8 @@ export default () => {
                 }
             });
             setResults(response.data.businesses);
-            setErrorMessage('Search okay with ' + searchTerm)
-
+            console.log('Search okay with ' + searchTerm)
+            
         } catch (err) {
             console.log(err)
             setErrorMessage('Error occured searching ' + searchTerm)
