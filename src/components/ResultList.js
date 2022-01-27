@@ -5,7 +5,12 @@ import ResultDetail from "./ResultDetail";
 
 
 const ResultList = ({ title, results, navigation }) => {
-    return <View style={styles.container}>
+   if(!results.length){
+       return null
+   }
+   
+   
+   return <View style={styles.container}>
         {results.length < 1 ? <View style={styles.t} /> : null}
         <Text style={styles.titleStyle}>{title} {results.length} </Text>
 
