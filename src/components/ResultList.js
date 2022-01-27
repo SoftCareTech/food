@@ -42,7 +42,7 @@ const styles = StyleSheet.create({
 
 
 })
-export default ResultList
+export default withNavigation (ResultList)
 
 
 
